@@ -56,7 +56,7 @@ class HistoryFragment : Fragment() {
 
     private fun updateOrderStatus() {
         val itemPushKey = listOfOrderItem[0].itemPushKey
-        val completeOrderReference = database.reference.child("CompleteOrder").child(itemPushKey!!)
+        val completeOrderReference = database.reference.child("CompletedOrder").child(itemPushKey!!)
         completeOrderReference.child("paymentReceived").setValue(true)
     }
 
